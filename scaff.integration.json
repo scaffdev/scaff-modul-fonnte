@@ -1,0 +1,17 @@
+{
+  "kode": "fonnte",
+  "version": "1.0.0",
+  "frameworks": ["nextjs"],
+  "files": [
+    { "src": "lib/notifications/fonnte.ts", "dest": "lib/notifications/fonnte.ts" },
+    { "src": "app/api/notifications/whatsapp/route.ts", "dest": "app/api/notifications/whatsapp/route.ts" }
+  ],
+  "env": ["FONNTE_TOKEN"],
+  "setup": "SETUP-FRAGMENT.md",
+  "removal": {
+    "files": ["lib/notifications/fonnte.ts", "app/api/notifications/whatsapp/route.ts"],
+    "env": ["FONNTE_TOKEN"],
+    "stepsFile": "REMOVE.md"
+  },
+  "conflicts": []
+}
