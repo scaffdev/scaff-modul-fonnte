@@ -5,10 +5,10 @@ namespace App\Services;
 use Illuminate\Support\Facades\Http;
 
 /**
- * Service Fonnte — STAGED untuk dukungan Laravel (aktif di v1.1.0).
+ * Service Fonnte — disuntik Scaffdev Builder ke template Laravel.
  *
  * NOTED:
- * - File ini BELUM disuntik CLI (manifest v1.0.0 frameworks: ["nextjs"]).
+ * - File ini 100% milik modul "fonnte" (lihat scaff.integration.json).
  * - Diport 1:1 dari contoh resmi PHP di docs (curl → Http facade).
  *   Ref: https://docs.fonnte.com/send-whatsapp-message-with-php-api/
  */

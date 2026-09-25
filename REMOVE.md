@@ -54,6 +54,42 @@ grep -ri "fonnte\|whatsapp" app lib components
 
 ## B. Template Laravel
 
-Modul ini v1.0.0 mendukung Next.js saja. File `laravel/` berstatus STAGED
-(belum disuntik CLI) sehingga tidak ada yang perlu dicopot.
-Berlaku mulai v1.1.0 — panduan section B akan ditambahkan saat itu.
+### B.1. Hapus file (aman — tidak dipakai kode lain)
+
+- `app/Services/FonnteService.php` — client kirim pesan WA.
+- `app/Http/Controllers/FonnteController.php` — route kirim WA.
+
+```bash
+rm "app/Services/FonnteService.php" "app/Http/Controllers/FonnteController.php"
+```
+
+### B.2. Hapus env (dari `.env`)
+
+- `FONNTE_TOKEN`
+
+Hapus barisnya, jangan dikosongkan saja.
+
+### B.3. Bersihkan dependency
+
+Tidak ada dependency tambahan (modul ini memakai HTTP client Laravel).
+
+### B.4. Verifikasi (wajib lolos semua)
+
+```bash
+composer install --no-dev
+php artisan config:clear
+```
+
+```bash
+grep -ri "fonnte\|whatsapp" app routes resources config
+```
+
+- Install harus sukses tanpa error.
+- Grep harus menghasilkan **0 baris**. Bila masih ada sisa, hapus
+  pemakaiannya, lalu verifikasi ulang.
+- Hapus juga blok `fonnte` di `config/services.php` bila kamu menambahkannya.
+
+### B.5. Yang JANGAN dihapus (Laravel)
+
+- Flow order umum, `config/services.php` itu sendiri (cukup hapus blok
+  `fonnte`-nya), `composer.json`, `.env` (cukup hapus baris env-nya).

@@ -1,15 +1,17 @@
 {
   "kode": "fonnte",
   "version": "1.0.0",
-  "frameworks": ["nextjs"],
+  "frameworks": ["nextjs", "laravel"],
   "files": [
-    { "src": "lib/notifications/fonnte.ts", "dest": "lib/notifications/fonnte.ts" },
-    { "src": "app/api/notifications/whatsapp/route.ts", "dest": "app/api/notifications/whatsapp/route.ts" }
+    { "src": "lib/notifications/fonnte.ts", "dest": "lib/notifications/fonnte.ts", "frameworks": ["nextjs"] },
+    { "src": "app/api/notifications/whatsapp/route.ts", "dest": "app/api/notifications/whatsapp/route.ts", "frameworks": ["nextjs"] },
+    { "src": "app/Services/FonnteService.php", "dest": "app/Services/FonnteService.php", "frameworks": ["laravel"] },
+    { "src": "app/Http/Controllers/FonnteController.php", "dest": "app/Http/Controllers/FonnteController.php", "frameworks": ["laravel"] }
   ],
   "env": ["FONNTE_TOKEN"],
   "setup": "SETUP-FRAGMENT.md",
   "removal": {
-    "files": ["lib/notifications/fonnte.ts", "app/api/notifications/whatsapp/route.ts"],
+    "files": ["lib/notifications/fonnte.ts", "app/api/notifications/whatsapp/route.ts", "app/Services/FonnteService.php", "app/Http/Controllers/FonnteController.php"],
     "env": ["FONNTE_TOKEN"],
     "stepsFile": "REMOVE.md"
   },

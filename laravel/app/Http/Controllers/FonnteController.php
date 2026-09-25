@@ -7,9 +7,9 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
 /**
- * Controller Fonnte — STAGED untuk dukungan Laravel (aktif di v1.1.0).
+ * Controller Fonnte — disuntik Scaffdev Builder ke template Laravel.
  *
- * NOTED — daftarkan route manual saat v1.1.0 rilis:
+ * NOTED — daftarkan route manual (mis. di routes/api.php):
  *   Route::post('/api/notifications/whatsapp', [FonnteController::class, 'send']);
  * Idealnya dipanggil server-ke-server (mis. setelah payment sukses) +
  * auth/rate-limit (TODO pemilik project).

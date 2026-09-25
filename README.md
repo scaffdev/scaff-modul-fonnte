@@ -7,7 +7,7 @@ Disuntik via `scaff ... --with=fonnte` (CLI 0.2.0+).
 | Framework | Status | Isi |
 |---|---|---|
 | Next.js | ✅ v1.0.0 | Client kirim pesan + route server-side |
-| Laravel | 🟡 STAGED (v1.1.0) | Service + Controller sudah ditulis, belum disuntik CLI |
+| Laravel | ✅ v1.0.0 | Service + Controller (HTTP client) |
 
 ## Struktur
 
@@ -19,7 +19,7 @@ scaff-modul-fonnte/
 ├── nextjs/
 │   ├── lib/notifications/fonnte.ts
 │   └── app/api/notifications/whatsapp/route.ts
-└── laravel/                 ← STAGED untuk v1.1.0
+└── laravel/                 ← sumber untuk base Laravel
     ├── app/Services/FonnteService.php
     └── app/Http/Controllers/FonnteController.php
 ```
