@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { sendWhatsApp } from "../../../../../lib/notifications/fonnte";
+import { sendWhatsApp } from "../../../../lib/notifications/fonnte";
 
 /**
  * POST /api/notifications/whatsapp — kirim pesan WhatsApp via Fonnte.

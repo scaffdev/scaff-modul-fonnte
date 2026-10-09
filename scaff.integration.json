@@ -1,6 +1,7 @@
 {
   "kode": "fonnte",
   "version": "1.0.0",
+  "docsUrl": "https://docs.fonnte.com/api-send-message/",
   "frameworks": ["nextjs", "laravel"],
   "files": [
     { "src": "lib/notifications/fonnte.ts", "dest": "lib/notifications/fonnte.ts", "frameworks": ["nextjs"] },
