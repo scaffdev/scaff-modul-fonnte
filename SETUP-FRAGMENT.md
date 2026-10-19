@@ -55,7 +55,8 @@ FONNTE_TOKEN=xxxx   # rahasia! server saja
 ```php
 use App\Http\Controllers\FonnteController;
 
-Route::post('/api/notifications/whatsapp', [FonnteController::class, 'send']);
+// routes/api.php otomatis berprefix /api — jangan tulis /api lagi di sini.
+Route::post('/notifications/whatsapp', [FonnteController::class, 'send']);
 ```
 
 Lalu `php artisan config:clear`. Idealnya dipanggil server-ke-server

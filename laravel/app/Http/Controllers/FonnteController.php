@@ -9,8 +9,8 @@ use Illuminate\Http\Request;
 /**
  * Controller Fonnte — disuntik Scaffdev Builder ke template Laravel.
  *
- * NOTED — daftarkan route manual (mis. di routes/api.php):
- *   Route::post('/api/notifications/whatsapp', [FonnteController::class, 'send']);
+ * NOTED — daftarkan route manual (mis. di routes/api.php; prefix /api otomatis):
+ *   Route::post('/notifications/whatsapp', [FonnteController::class, 'send']);
  * Idealnya dipanggil server-ke-server (mis. setelah payment sukses) +
  * auth/rate-limit (TODO pemilik project).
  */
